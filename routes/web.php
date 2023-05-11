@@ -25,6 +25,9 @@ Auth::routes();
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/pagename', 'PageController@methodname');
+Route::get('/', 'HomeController@index');
+Route::get('/recipes', 'RecipesController@index');
+Route::get('/about', 'AboutController@index');
+Route::get('/contact', 'ContactController@index');
 
 
