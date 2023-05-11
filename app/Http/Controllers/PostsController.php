@@ -41,28 +41,19 @@ class PostsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        $request->validate([
-            'title' => 'required',
-            'description' => 'required',
-            'image' => 'required|mimes:jpg,png,jpeg|max:5048'
-        ]);
+{
+    $request->validate([
+        'recipe_name' => 'required',
+        'recipe_description' => 'required',
+        'recipe_ingredients' => 'required',
+        'cuisine' => 'required',
+    ]);
 
-        $newImageName = uniqid() . '-' . $request->title . '.' . $request->image->extension();
+    Post::create($request->all());
 
-        $request->image->move(public_path('images'), $newImageName);
-
-        Post::create([
-            'title' => $request->input('title'),
-            'description' => $request->input('description'),
-            'slug' => SlugService::createSlug(Post::class, 'slug', $request->title),
-            'image_path' => $newImageName,
-            'user_id' => auth()->user()->id
-        ]);
-
-        return redirect('/blog')
-            ->with('message', 'Your post has been added!');
-    }
+    return redirect()->route('posts.index')
+                    ->with('success','Post created successfully.');
+}
 
     /**
      * Display the specified resource.
@@ -95,24 +86,20 @@ class PostsController extends Controller
      * @param  string  $slug
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $slug)
-    {
-        $request->validate([
-            'title' => 'required',
-            'description' => 'required',
-        ]);
+    public function update(Request $request, Post $post)
+{
+    $request->validate([
+        'recipe_name' => 'required',
+        'recipe_description' => 'required',
+        'recipe_ingredients' => 'required',
+        'cuisine' => 'required',
+    ]);
 
-        Post::where('slug', $slug)
-            ->update([
-                'title' => $request->input('title'),
-                'description' => $request->input('description'),
-                'slug' => SlugService::createSlug(Post::class, 'slug', $request->title),
-                'user_id' => auth()->user()->id
-            ]);
+    $post->update($request->all());
 
-        return redirect('/blog')
-            ->with('message', 'Your post has been updated!');
-    }
+    return redirect()->route('posts.index')
+                    ->with('success','Post updated successfully');
+}
 
     /**
      * Remove the specified resource from storage.
