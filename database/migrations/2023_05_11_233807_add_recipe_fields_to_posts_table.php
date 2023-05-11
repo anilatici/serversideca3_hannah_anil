@@ -12,11 +12,15 @@ class AddRecipeFieldsToPostsTable extends Migration
      * @return void
      */
     public function up()
-    {
-        Schema::table('posts', function (Blueprint $table) {
-            //
-        });
-    }
+{
+    Schema::table('posts', function (Blueprint $table) {
+        $table->string('recipe_name');
+        $table->text('recipe_description');
+        $table->text('recipe_ingredients');
+        $table->string('cuisine');
+    });
+}
+
 
     /**
      * Reverse the migrations.
