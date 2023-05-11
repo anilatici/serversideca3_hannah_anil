@@ -11,7 +11,14 @@ class Post extends Model
     use HasFactory;
     use Sluggable;
 
-    protected $fillable = ['title', 'slug', 'description', 'image_path', 'user_id'];
+    protected $fillable = [
+        'id', 
+        'recipe_name', 
+        'recipe_description', 
+        'recipe_ingredients', 
+        'cuisine'
+    ];
+    
 
     public function user()
     {
