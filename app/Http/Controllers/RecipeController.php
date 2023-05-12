@@ -17,7 +17,7 @@ class RecipeController extends Controller
         //
 
         $recipes = Recipe::all();
-        return $recipes;
+        return view ('blog.index', ['recipes' => $recipes]);
     }
 
     /**
@@ -28,6 +28,7 @@ class RecipeController extends Controller
     public function create()
     {
         //
+        return view('blog.create');
     }
 
     /**
@@ -39,6 +40,14 @@ class RecipeController extends Controller
     public function store(Request $request)
     {
         //
+        $newRecipe = Recipe::create([
+            'recipe_name' => $request->recipe_name,
+            'recipe_description' => $request->recipe_description,
+            'recipe_ingredients' => $request->recipe_ingredients,
+            'cuisine' => $request->cuisine
+        ]);
+
+        return redirect('blog/' . $newRecipe->id);
     }
 
     /**
@@ -50,7 +59,7 @@ class RecipeController extends Controller
     public function show(Recipe $recipe)
     {
         //
-        return $recipe;
+        return view('blog.show', ['recipe' => $recipe]);
     }
 
     /**
