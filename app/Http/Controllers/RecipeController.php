@@ -71,6 +71,7 @@ class RecipeController extends Controller
     public function edit(Recipe $recipe)
     {
         //
+        return view('blog.edit', ['recipe' => $recipe]);
     }
 
     /**
