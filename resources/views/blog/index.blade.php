@@ -1,29 +1,26 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="w-4/5 m-auto text-center">
-    <div class="py-15 border-b border-gray-200">
-        <h1 class="text-6xl">
-            Blog Posts
-        </h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 pt-2">
+                 <div class="row">
+                    <div class="col-8">
+                        <h1 class="display-one">Food!</h1>
+                        <p>Enjoy reading our recipes. Click on a recipe to read!</p>
     </div>
+                    <div class="col-4">
+                        <p>Create new Recipe</p>
+                        <a href="/blog/create/post" class="btn btn-primary btn-sm">Add Recipe</a>
 </div>
-
-@if (session()->has('message'))
-    <div class="w-4/5 m-auto mt-10 pl-2">
-        <p class="w-2/6 mb-4 text-gray-50 bg-green-500 rounded-2xl py-4">
-            {{ session()->get('message') }}
-        </p>
     </div>
-@endif
-
-@if (Auth::check())
-    <div class="pt-15 w-4/5 m-auto">
-        <a 
-            href="/blog/create"
-            class="bg-blue-500 uppercase bg-transparent text-gray-100 text-xs font-extrabold py-3 px-5 rounded-3xl">
-            Create post
-        </a>
+                @forelse($recipes as $recipe)
+                    <ul>
+                        <li><a href="./blog/{{ $recipe->id }}">{{ ucfirst($recipe->recipe_name) }}</a></li>
+                    </ul>
+                @empty
+                    <p class="text-warning">No recipes available</p>
+                @endforelse
     </div>
 @endif
 
