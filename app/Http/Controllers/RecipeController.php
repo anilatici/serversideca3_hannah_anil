@@ -15,6 +15,9 @@ class RecipeController extends Controller
     public function index()
     {
         //
+
+        $recipes = Recipe::all();
+        return $recipes;
     }
 
     /**
@@ -47,6 +50,7 @@ class RecipeController extends Controller
     public function show(Recipe $recipe)
     {
         //
+        return $recipe;
     }
 
     /**
