@@ -9,4 +9,10 @@ class Recipe extends Model
 {
     public $timestamps = false;
     use HasFactory;
+    protected $fillable = [
+        'recipe_name',
+        'recipe_description',
+        'recipe_ingredients',
+        'cuisine'
+    ];
 }
