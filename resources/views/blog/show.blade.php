@@ -1,11 +1,21 @@
 @extends('layouts.app')
-
 @section('content')
-<div class="w-4/5 m-auto text-left">
-    <div class="py-15">
-        <h1 class="text-6xl">
-            {{ $post->title }}
-        </h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 pt-2">
+                <a href="/blog" class="btn btn-outline-primary btn-sm">Go back</a>
+                <h1 class="display-one">{{ ucfirst($recipe->recipe_name) }}</h1>
+                <p>{!! $recipe->recipe_description !!}</p>
+                <p><strong>Ingredients:</strong> {{ $recipe->recipe_ingredients }}</p> 
+                <p><strong>Cuisine:</strong> {{ $recipe->cuisine }}</p>
+                <hr>
+                <a href="/blog/{{ $recipe->id }}/edit" class="btn btn-outline-primary">Edit Post</a>
+                <br><br>
+                <form id="delete-frm" class="" action="" method="POST">
+                    @method('DELETE')
+                    @csrf
+                    <button class="btn btn-danger">Delete Post</button>
+                </form>
     </div>
 </div>
 
