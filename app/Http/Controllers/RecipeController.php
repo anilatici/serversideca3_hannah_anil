@@ -84,6 +84,13 @@ class RecipeController extends Controller
     public function update(Request $request, Recipe $recipe)
     {
         //
+        $recipe->update([
+            'recipe_name' => $request->recipe_name,
+            'recipe_description' => $request->recipe_description,
+            'recipe_ingredients' => $request->recipe_ingredients,
+            'cuisine' => $request->cuisine
+        ]);
+        return redirect('blog/' . $recipe->id);
     }
 
     /**
