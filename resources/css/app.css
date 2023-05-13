@@ -13,3 +13,28 @@
     background-size: cover;
     height: 600px;
 }
+
+.index-heading {
+    color: #4a5568;
+}
+
+.index-button {
+    transition: all 0.3s ease;
+}
+
+.index-button:hover {
+    background-color: #4299e1;
+    transform: scale(1.05);
+}
+
+.index-link {
+    color: #2b6cb0;
+}
+
+.index-link:hover {
+    color: #2c5282;
+}
+
+.ind-warning {
+    color: #d69e2e;
+}
