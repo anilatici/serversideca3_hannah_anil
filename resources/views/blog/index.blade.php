@@ -5,8 +5,8 @@
         <div class="px-2 py-4">
             <h1 class="index-heading text-4xl font-bold mb-2">Food Blog</h1>
             <p class="text-base mb-4">Enjoy reading our recipes. Click on a recipe to read!</p>
-            <p class="text-base mb-2">Create new Recipe</p>
-            <a href="/blog/create/post" class="index-button py-2 px-4 bg-blue-500 text-white text-sm rounded mb-4">Add Recipe</a>
+            <p class="text-base mb-2" style="margin-bottom:20px">Create new Recipe</p>
+            <a href="/blog/create/post" class="index-button py-2 px-4 bg-blue-500 text-white text-sm rounded mb-4" style="margin-bottom:20px">Add Recipe</a>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             @forelse($recipes as $recipe)
