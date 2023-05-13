@@ -11,12 +11,12 @@
                 <p style="margin-bottom:7px"><strong>Ingredients:</strong> {{ $recipe->recipe_ingredients }}</p> 
                 <p style="margin-bottom:7px"><strong>Cuisine:</strong> {{ $recipe->cuisine }}</p>
                 <hr class="mb-4">
-                <a href="/blog/{{ $recipe->id }}/edit" class="recipe-edit-button py-2 px-4 bg-blue-500 text-white text-sm rounded">Edit Post</a>
+                <a href="/blog/{{ $recipe->id }}/edit" class="recipe-edit-button py-2 px-4 bg-blue-500 text-white text-sm rounded">Edit Recipe</a>
                 <br><br>
                 <form id="delete-frm" class="" action="" method="POST">
                     @method('DELETE')
                     @csrf
-                    <button class="recipe-delete-button py-2 px-4 bg-red-500 text-white text-sm rounded">Delete Post</button>
+                    <button class="recipe-delete-button py-2 px-4 bg-red-500 text-white text-sm rounded">Delete Recipe</button>
                 </form>
             </div>
         </div>
