@@ -13,6 +13,7 @@ class Recipe extends Model
         'recipe_name',
         'recipe_description',
         'recipe_ingredients',
-        'cuisine'
+        'cuisine',
+        'recipe_img'
     ];
 }

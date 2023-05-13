@@ -35,6 +35,11 @@
                                 <textarea id="cuisine" class="form-input" name="cuisine" placeholder="Enter Cuisine"
                                           rows="3" required></textarea>
                             </div>
+                            <div class="w-full px-3 mt-2">
+                                <label for="recipe_img" class="form-label">Recipe Image Link(500x500)</label>
+                                <textarea id="recipe_img" class="form-input" name="recipe_img" placeholder="Enter URL"
+                                          rows="3" required></textarea>
+                            </div>
                         </div>
                         <div class="flex flex-wrap mt-2">
                             <div class="w-full text-center">

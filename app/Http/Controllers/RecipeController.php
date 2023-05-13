@@ -44,7 +44,8 @@ class RecipeController extends Controller
             'recipe_name' => $request->recipe_name,
             'recipe_description' => $request->recipe_description,
             'recipe_ingredients' => $request->recipe_ingredients,
-            'cuisine' => $request->cuisine
+            'cuisine' => $request->cuisine,
+            'recipe_img' => $request->recipe_img
         ]);
 
         return redirect('blog/' . $newRecipe->id);
@@ -88,7 +89,8 @@ class RecipeController extends Controller
             'recipe_name' => $request->recipe_name,
             'recipe_description' => $request->recipe_description,
             'recipe_ingredients' => $request->recipe_ingredients,
-            'cuisine' => $request->cuisine
+            'cuisine' => $request->cuisine,
+            'recipe_img' => $request->recipe_img
         ]);
         return redirect('blog/' . $recipe->id);
     }
