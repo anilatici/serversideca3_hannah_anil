@@ -36,6 +36,11 @@
                                 <textarea id="cuisine" class="form-input" name="cuisine" placeholder="Enter Cuisine"
                                           rows="5" required>{{ $recipe->cuisine }}</textarea>
                             </div>
+                            <div class="control-group w-full px-2 mt-2">
+                                <label for="recipe_img" class="form-label">Recipe Image Link(500x500)</label>
+                                <textarea id="recipe_img" class="form-input" name="recipe_img" placeholder="Enter URL"
+                                          rows="5" required>{{ $recipe->recipe_img }}</textarea>
+                            </div>
 
                         </div>
                         <div class="flex flex-wrap -mx-2 mt-2">
