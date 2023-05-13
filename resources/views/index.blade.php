@@ -5,7 +5,7 @@
         <div class="flex text-gray-100 pt-10">
             <div class="m-auto pt-4 pb-16 sm:m-auto w-4/5 block text-center">
                 <h1 class="sm:text-white text-4xl uppercase font-bold text-shadow-md pb-14">
-                    <span style="background-color: dimgray; display: inline-block; padding: 10px 20px; border-radius: 8px; font-size: 3.5rem;">Welcome to Delicious Recipes!</span>
+                    <span style="background-color: rgb(49, 49, 49); display: inline-block; padding: 10px 20px; border-radius: 8px; font-size: 3.5rem;">Welcome to Delicious Recipes!</span>
                 </h1>
                 <a 
                     href="/blog"
