@@ -1,49 +1,48 @@
-## Laravel 8 Complete Blog
+# Delicious Recipes
 
-This repository is linked to [this youtube video](https://www.youtube.com/watch?v=HKJDLXsTr8A&t=4710s) where I show you how to create a complete blog in Laravel 8 using best practices.
-
-•	Author: Code With Dary <br>
-•	Twitter: [@codewithdary](https://twitter.com/codewithdary) <br>
-•	Instagram: [@codewithdary](https://www.instagram.com/codewithdary/) <br>
+Delicious Recipes is your ultimate destination for a wide variety of mouthwatering recipes. Whether you're a seasoned chef or just starting out in the kitchen, our website offers a diverse collection of recipes to satisfy every palate.
 
 ## Requirements
-•	PHP 7.3 or higher <br>
-•	Node 12.13.0 or higher <br>
+• Code Editor (e.g. Visual Studio)
 
-## Usage <br>
-Setting up your development environment on your local machine: <br>
-```
-git clone git@github.com:codewithdary/laravel-8-complete-blog.git
-cd laravel-8-complete-blog
-cp .env.example .env
+• PHP 7.3 or higher
+
+• Node 12.13.0 or higher
+
+
+• Xampp or another MySQL Database client
+## Installation
+
+```bash
+git clone git@github.com:anilatici/serversideca3_hannah_anil.git
+cd serversideca3_hammah_anil
+# Change the .env file to match your database
 composer install
 php artisan key:generate
 php artisan cache:clear && php artisan config:clear
+```
+
+## Usage
+Start your local MySQL Database server using Xampp or your choice of MySQL client and then enter this in your terminal:
+
+```bash
 php artisan serve
 ```
 
-## Before starting <br>
-Create a database <br>
-```
-mysql
-create database laravelblog;
-exit;
-```
+## Screenshots
+![Delicious Recipes](https://i.ibb.co/djQnMPb/Screenshot-2023-05-13-at-06-06-59.png)
 
-Setup your database credentials in the .env file <br>
-```
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=laravelblog
-DB_USERNAME={USERNAME}
-DB_PASSWORD={PASSWORD}
-```
+![Delicious Recipes](https://i.ibb.co/zRSq2dP/Screenshot-2023-05-13-at-06-07-12.png)
 
-Migrate the tables
-```
-php artisan migrate
-```
+![Delicious Recipes](https://i.ibb.co/FXkCgjT/Screenshot-2023-05-13-at-06-07-20.png)
 
-## Contributing
-Do not hesitate to contribute to the project by adapting or adding features ! Bug reports or pull requests are welcome.
+![Delicious Recipes](https://i.ibb.co/MSncMk6/Screenshot-2023-05-13-at-06-07-34.png)
+
+![Delicious Recipes](https://i.ibb.co/MVj1FXP/Screenshot-2023-05-13-at-06-07-43.png)
+
+![Delicious Recipes](https://i.ibb.co/p4PwD5Z/Screenshot-2023-05-13-at-06-07-48.png)
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
